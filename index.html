@@ -2,61 +2,727 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>S.P. AUTO | Il tuo usato sicuro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.P. AUTO - Il tuo usato sicuro</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:#0b2945;background:#fff}
-a{text-decoration:none;color:inherit}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* BARRA SUPERIORE */
-.top{
-background:#082744;
-color:white;
-height:32px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:11px;
+html, body {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #0b2945;
 }
-.top-inner{
-width:1180px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 25px;
-}
-.top-left{display:flex;gap:32px}
-.social{display:flex;gap:13px;font-weight:bold}
 
-/* MENU */
-nav{
-height:66px;
-background:#fff;
-display:flex;
-align-items:center;
-padding:0 max(5%,calc((100% - 1180px)/2));
-border-bottom:1px solid #ddd;
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.brand{
-font-size:28px;
-font-weight:900;
-font-style:italic;
-white-space:nowrap;
-color:#082744;
+
+/* ===== BARRA SUPERIORE ===== */
+
+.topbar {
+  height: 27px;
+  background: #082844;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.brand:before{
-content:"///";
-color:#168fd1;
-font-style:normal;
-margin-right:7px;
-letter-spacing:-5px;
+
+.topbar-inner {
+  width: 1180px;
+  max-width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
 }
-.links{
-margin-left:auto;
-display:flex;
-align-items:center;
-gap:31px;
-font-size:12px;
+
+.top-contacts {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
+
+.social {
+  display: flex;
+  gap: 12px;
+  font-weight: bold;
+}
+
+/* ===== MENU ===== */
+
+.navbar {
+  height: 60px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-inner {
+  width: 1180px;
+  max-width: 94%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logo-bars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 8px;
+  transform: skew(-24deg);
+}
+
+.logo-bars i {
+  display: block;
+  width: 8px;
+  height: 23px;
+}
+
+.logo-bars i:nth-child(1) {
+  background: #18a8e0;
+}
+
+.logo-bars i:nth-child(2) {
+  background: #1766b1;
+}
+
+.logo-bars i:nth-child(3) {
+  background: #ed334f;
+}
+
+.logo-text {
+  font-size: 27px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: .5px;
+  color: #0b2945;
+}
+
+.menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 11px;
+  color: #263747;
+}
+
+.menu a {
+  white-space: nowrap;
+}
+
+.menu a:first-child {
+  font-weight: bold;
+  border-bottom: 2px solid #0b2945;
+  padding-bottom: 5px;
+}
+
+.whatsapp {
+  background: #082844;
+  color: white !important;
+  border-radius: 6px;
+  padding: 10px 17px;
+  font-weight: bold;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  position: relative;
+  height: 445px;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(8, 27, 43, .14), rgba(8, 27, 43, .14)),
+    url("20191104_210930.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-brand {
+  position: absolute;
+  width: 100%;
+  top: 110px;
+  left: 0;
+  text-align: center;
+  color: white;
+}
+
+.hero-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-bars {
+  display: flex;
+  gap: 3px;
+  margin-right: 13px;
+  transform: skew(-24deg);
+}
+
+.hero-bars i {
+  display: block;
+  width: 14px;
+  height: 38px;
+}
+
+.hero-bars i:nth-child(1) {
+  background: #18a8e0;
+}
+
+.hero-bars i:nth-child(2) {
+  background: #1766b1;
+}
+
+.hero-bars i:nth-child(3) {
+  background: #ed334f;
+}
+
+.hero-logo strong {
+  font-size: 51px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 5px rgba(0,0,0,.4);
+}
+
+.slogan {
+  margin-top: 13px;
+  font-size: 25px;
+  font-weight: 400;
+  text-shadow: 0 2px 5px rgba(0,0,0,.45);
+}
+
+/* ===== SERVIZI ===== */
+
+.features {
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  width: 1120px;
+  max-width: 92%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.feature {
+  min-height: 91px;
+  background: rgba(255,255,255,.97);
+  border-radius: 7px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.18);
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 14px;
+}
+
+.feature-icon {
+  width: 34px;
+  min-width: 34px;
+  margin-right: 10px;
+  color: #0b2945;
+}
+
+.feature-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature h3 {
+  font-size: 12px;
+  margin-bottom: 7px;
+  color: #092844;
+}
+
+.feature p {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #4f5d69;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  background: #082e4e;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cta-search {
+  margin-right: 8px;
+}
+
+/* ===== VENDITORI ===== */
+
+.staff {
+  background: white;
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 19px;
+}
+
+.staff-inner {
+  width: 720px;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.person {
+  border-top: 1px solid #cbd1d6;
+  padding-top: 11px;
+  display: flex;
+  gap: 10px;
+}
+
+.person-symbol {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.person h3 {
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: #092844;
+}
+
+.role {
+  font-size: 9px;
+  color: #4e5b65;
+  margin-bottom: 6px;
+}
+
+.person-contact {
+  font-size: 8px;
+  white-space: nowrap;
+  color: #263b4c;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: #77838d;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+/* ===== VERSIONE TELEFONO ===== */
+
+@media (max-width: 700px) {
+
+  .topbar {
+    height: 20px;
+  }
+
+  .topbar-inner {
+    max-width: 96%;
+    font-size: 5.7px;
+  }
+
+  .top-contacts {
+    gap: 10px;
+  }
+
+  .social {
+    font-size: 6px;
+    gap: 6px;
+  }
+
+  .navbar {
+    height: 37px;
+  }
+
+  .navbar-inner {
+    max-width: 96%;
+  }
+
+  .logo-bars {
+    gap: 1px;
+    margin-right: 4px;
+  }
+
+  .logo-bars i {
+    width: 4px;
+    height: 13px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .menu {
+    gap: 7px;
+    font-size: 5.3px;
+  }
+
+  .menu a:first-child {
+    padding-bottom: 2px;
+    border-bottom-width: 1px;
+  }
+
+  .whatsapp {
+    padding: 6px 8px;
+    border-radius: 4px;
+  }
+
+  .hero {
+    height: 300px;
+    background-position: center center;
+  }
+
+  .hero-brand {
+    top: 69px;
+  }
+
+  .hero-bars {
+    gap: 2px;
+    margin-right: 7px;
+  }
+
+  .hero-bars i {
+    width: 8px;
+    height: 23px;
+  }
+
+  .hero-logo strong {
+    font-size: 31px;
+  }
+
+  .slogan {
+    margin-top: 7px;
+    font-size: 16px;
+  }
+
+  .features {
+    width: 94%;
+    max-width: none;
+    bottom: 47px;
+    gap: 5px;
+  }
+
+  .feature {
+    min-height: 72px;
+    border-radius: 4px;
+    padding: 8px 6px;
+  }
+
+  .feature-icon {
+    width: 19px;
+    min-width: 19px;
+    margin-right: 4px;
+  }
+
+  .feature-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .feature h3 {
+    font-size: 7px;
+    margin-bottom: 4px;
+  }
+
+  .feature p {
+    font-size: 5.7px;
+    line-height: 1.35;
+  }
+
+  .cta {
+    bottom: 10px;
+    padding: 7px 17px;
+    font-size: 7px;
+  }
+
+  .cta-search {
+    margin-right: 5px;
+  }
+
+  .staff {
+    height: 78px;
+    padding-top: 12px;
+  }
+
+  .staff-inner {
+    width: 72%;
+    max-width: none;
+    gap: 38px;
+  }
+
+  .person {
+    padding-top: 7px;
+    gap: 5px;
+  }
+
+  .person-symbol {
+    font-size: 11px;
+  }
+
+  .person h3 {
+    font-size: 7px;
+    margin-bottom: 2px;
+  }
+
+  .role {
+    font-size: 5.7px;
+    margin-bottom: 4px;
+  }
+
+  .person-contact {
+    font-size: 4.8px;
+  }
+
+  .footer {
+    height: 18px;
+    font-size: 5px;
+    gap: 6px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+
+      <div class="top-contacts">
+        <span>☎ &nbsp;095 878357</span>
+        <span>✉ &nbsp;spautoaciccatena@gmail.com</span>
+        <span>● &nbsp;Via Nizzeti 197/A – Aci Catena (CT)</span>
+      </div>
+
+      <div class="social">
+        <span>◎</span>
+        <span>f</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+
+      <div class="logo">
+        <span class="logo-bars">
+          <i></i><i></i><i></i>
+        </span>
+        <span class="logo-text">S.P. AUTO</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#auto">Le nostre auto</a>
+        <a href="#trova">Trova la tua auto</a>
+        <a href="#distanza">Acquisto a distanza</a>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#contatti">Contatti</a>
+        <a class="whatsapp" href="https://wa.me/393297944140">
+          ◉ &nbsp;WhatsApp
+        </a>
+      </nav>
+
+    </div>
+  </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-brand">
+
+    <div class="hero-logo">
+      <span class="hero-bars">
+        <i></i><i></i><i></i>
+      </span>
+      <strong>S.P. AUTO</strong>
+    </div>
+
+    <div class="slogan">
+      Il tuo usato sicuro
+    </div>
+
+  </div>
+
+
+  <div class="features">
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </div>
+
+      <div>
+        <h3>Garanzia fino a 60 mesi</h3>
+        <p>Soluzioni di garanzia disponibili sulle vetture.</p>
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 7h11l-3-3"/>
+          <path d="M18 7l-3 3"/>
+          <path d="M17 17H6l3 3"/>
+          <path d="M6 17l3-3"/>
+        </svg>
+      </div>
+
+      <div>
+        <h3>Permuta</h3>
+        <p>Valutiamo il tuo usato.</p>
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24">
+          <ellipse cx="12" cy="6" rx="6" ry="3"/>
+          <path d="M6 6v4c0 2 12 2 12 0V6"/>
+          <path d="M6 10v4c0 2 12 2 12 0v-4"/>
+          <path d="M6 14v4c0 2 12 2 12 0v-4"/>
+        </svg>
+      </div>
+
+      <div>
+        <h3>Finanziamenti</h3>
+        <p>Soluzioni personalizzate anche sull'intero importo.</p>
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 6h11v10H3z"/>
+          <path d="M14 10h4l3 3v3h-7z"/>
+          <circle cx="7" cy="18" r="2"/>
+          <circle cx="18" cy="18" r="2"/>
+        </svg>
+      </div>
+
+      <div>
+        <h3>Consegna in tutta Italia</h3>
+        <p>Acquisto e gestione anche a distanza.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a class="cta" href="#auto">
+    <span class="cta-search">⌕</span>
+    Scopri le nostre auto
+  </a>
+
+</section>
+
+
+<section class="staff" id="chi-siamo">
+
+  <div class="staff-inner">
+
+    <div class="person">
+
+      <div class="person-symbol">♟</div>
+
+      <div>
+        <h3>Alessandro Puleo</h3>
+        <div class="role">Vendita Auto Nuove e Usate</div>
+        <div class="person-contact">
+          ☎ 095 878357 &nbsp;&nbsp; ✉ spautoaciccatena@gmail.com
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="person">
+
+      <div class="person-symbol">♟</div>
+
+      <div>
+        <h3>Paolo Scalia</h3>
+        <div class="role">Vendita Auto Nuove e Usate</div>
+        <div class="person-contact">
+          ☎ 095 878357 &nbsp;&nbsp; ✉ spautoaciccatena@gmail.com
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer" id="contatti">
+  <span>S.P. AUTO</span>
+  <span>•</span>
+  <span>ACI CATENA (CT)</span>
+</footer>
+
+
+<div id="auto"></div>
+<div id="trova"></div>
+<div id="distanza"></div>
+
+</body>
+</html>
