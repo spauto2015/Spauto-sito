@@ -2,385 +2,61 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>S.P. AUTO | Il tuo usato sicuro</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:#0b2945;
-  background:#fff;
-}
+body{font-family:Arial,Helvetica,sans-serif;color:#0b2945;background:#fff}
 a{text-decoration:none;color:inherit}
 
 /* BARRA SUPERIORE */
 .top{
-  height:32px;
-  background:#062744;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:38px;
-  padding:0 20px;
-  font-size:11px;
-  white-space:nowrap;
+background:#082744;
+color:white;
+height:32px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:11px;
 }
+.top-inner{
+width:1180px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 25px;
+}
+.top-left{display:flex;gap:32px}
+.social{display:flex;gap:13px;font-weight:bold}
 
 /* MENU */
-.nav{
-  height:64px;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  padding:0 6%;
-  border-bottom:1px solid #ddd;
+nav{
+height:66px;
+background:#fff;
+display:flex;
+align-items:center;
+padding:0 max(5%,calc((100% - 1180px)/2));
+border-bottom:1px solid #ddd;
 }
 .brand{
-  font-size:26px;
-  font-weight:900;
-  font-style:italic;
-  white-space:nowrap;
+font-size:28px;
+font-weight:900;
+font-style:italic;
+white-space:nowrap;
+color:#082744;
 }
 .brand:before{
-  content:"///";
-  color:#168fd1;
-  margin-right:6px;
+content:"///";
+color:#168fd1;
+font-style:normal;
+margin-right:7px;
+letter-spacing:-5px;
 }
 .links{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  gap:24px;
-  font-size:11px;
+margin-left:auto;
+display:flex;
+align-items:center;
+gap:31px;
+font-size:12px;
 }
-.wa{
-  background:#062744;
-  color:#fff;
-  padding:9px 15px;
-  border-radius:6px;
-}
-
-/* FOTO PRINCIPALE */
-.hero{
-  position:relative;
-  min-height:500px;
-  background:
-    linear-gradient(rgba(3,25,47,.18),rgba(3,25,47,.32)),
-    url('20191104_210930.jpg') center center/cover no-repeat;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:35px 5% 22px;
-  color:#fff;
-}
-
-.hero-title{
-  font-size:48px;
-  line-height:1;
-  font-weight:900;
-  font-style:italic;
-  text-shadow:0 2px 7px rgba(0,0,0,.65);
-}
-.hero-title:before{
-  content:"///";
-  color:#13a6df;
-  margin-right:10px;
-}
-.slogan{
-  font-size:25px;
-  margin-top:12px;
-  margin-bottom:36px;
-  text-shadow:0 2px 5px #000;
-}
-
-/* 4 RIQUADRI */
-.features{
-  width:100%;
-  max-width:1120px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-.feature{
-  min-height:94px;
-  background:#fff;
-  color:#0b2945;
-  border-radius:7px;
-  padding:15px 15px;
-  box-shadow:0 3px 12px rgba(0,0,0,.22);
-}
-.icon{
-  font-size:21px;
-  font-weight:bold;
-  margin-bottom:6px;
-}
-.feature h3{
-  font-size:13px;
-  margin-bottom:5px;
-}
-.feature p{
-  color:#687480;
-  font-size:10px;
-  line-height:1.4;
-}
-
-/* PULSANTE */
-.mainbtn{
-  display:inline-block;
-  margin-top:17px;
-  background:#07304f;
-  color:#fff;
-  padding:10px 25px;
-  border-radius:22px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-/* PERSONE */
-.people{
-  background:#fff;
-  padding:17px 7% 13px;
-}
-.people-inner{
-  max-width:760px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-}
-.person{
-  border-top:1px solid #cfd6dc;
-  padding:9px 8px 5px;
-}
-.person h3{
-  font-size:12px;
-  margin-bottom:3px;
-}
-.person p{
-  font-size:9px;
-  line-height:1.5;
-  color:#34485b;
-}
-
-/* FOOTER */
-.footer{
-  text-align:center;
-  background:#fff;
-  color:#8b949d;
-  font-size:9px;
-  padding:5px 10px 10px;
-}
-
-/* TELEFONO */
-@media(max-width:700px){
-
-  .top{
-    height:27px;
-    gap:10px;
-    font-size:7px;
-    padding:0 5px;
-  }
-
-  .nav{
-    height:48px;
-    padding:0 4%;
-  }
-
-  .brand{
-    font-size:19px;
-  }
-
-  .links{
-    gap:9px;
-    font-size:7px;
-  }
-
-  .links a:nth-child(3),
-  .links a:nth-child(4),
-  .links a:nth-child(5),
-  .links a:nth-child(6){
-    display:none;
-  }
-
-  .wa{
-    padding:6px 8px;
-    font-size:7px;
-  }
-
-  .hero{
-    min-height:385px;
-    padding:25px 4% 15px;
-    background-position:center center;
-  }
-
-  .hero-title{
-    font-size:34px;
-  }
-
-  .hero-title:before{
-    margin-right:5px;
-  }
-
-  .slogan{
-    font-size:18px;
-    margin-top:8px;
-    margin-bottom:27px;
-  }
-
-  .features{
-    grid-template-columns:repeat(4,1fr);
-    gap:6px;
-  }
-
-  .feature{
-    min-height:100px;
-    padding:10px 7px;
-    border-radius:6px;
-  }
-
-  .icon{
-    font-size:17px;
-    margin-bottom:5px;
-  }
-
-  .feature h3{
-    font-size:9px;
-    line-height:1.15;
-    margin-bottom:4px;
-  }
-
-  .feature p{
-    font-size:7px;
-    line-height:1.25;
-  }
-
-  .mainbtn{
-    margin-top:14px;
-    padding:8px 18px;
-    font-size:9px;
-  }
-
-  .people{
-    padding:13px 5% 8px;
-  }
-
-  .people-inner{
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-  }
-
-  .person{
-    padding:7px 4px;
-  }
-
-  .person h3{
-    font-size:9px;
-  }
-
-  .person p{
-    font-size:7px;
-  }
-
-  .footer{
-    font-size:7px;
-    padding:3px 5px 7px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="top">
-  <span>☎ 095 878357</span>
-  <span>✉ spautoaciccatena@gmail.com</span>
-  <span>📍 Via Nizzeti 197/A – Aci Catena (CT)</span>
-</div>
-
-<nav class="nav">
-  <div class="brand">S.P. AUTO</div>
-
-  <div class="links">
-    <a href="#">Home</a>
-    <a href="#auto">Le nostre auto</a>
-    <a href="#trova">Trova la tua auto</a>
-    <a href="#distanza">Acquisto a distanza</a>
-    <a href="#chi">Chi siamo</a>
-    <a href="#contatti">Contatti</a>
-    <a class="wa" href="https://wa.me/393297944140">WhatsApp</a>
-  </div>
-</nav>
-
-<section class="hero">
-
-  <div class="hero-title">S.P. AUTO</div>
-  <div class="slogan">Il tuo usato sicuro</div>
-
-  <div class="features">
-
-    <div class="feature">
-      <div class="icon">♢</div>
-      <h3>Garanzia fino a 60 mesi</h3>
-      <p>Soluzioni di garanzia disponibili sulle vetture.</p>
-    </div>
-
-    <div class="feature">
-      <div class="icon">⇄</div>
-      <h3>Permuta</h3>
-      <p>Valutiamo il tuo usato.</p>
-    </div>
-
-    <div class="feature">
-      <div class="icon">▥</div>
-      <h3>Finanziamenti</h3>
-      <p>Soluzioni personalizzate anche sull'intero importo.</p>
-    </div>
-
-    <div class="feature">
-      <div class="icon">▣</div>
-      <h3>Consegna in tutta Italia</h3>
-      <p>Acquisto e gestione anche a distanza.</p>
-    </div>
-
-  </div>
-
-  <a class="mainbtn" id="auto" href="#contatti">
-    ⌕ &nbsp; Scopri le nostre auto
-  </a>
-
-</section>
-
-<section class="people" id="chi">
-
-  <div class="people-inner">
-
-    <div class="person">
-      <h3>👤 Alessandro Puleo</h3>
-      <p>
-        Vendita Auto Nuove e Usate<br>
-        ☎ 095 878357 &nbsp; ✉ spautoaciccatena@gmail.com
-      </p>
-    </div>
-
-    <div class="person">
-      <h3>👤 Paolo Scalia</h3>
-      <p>
-        Vendita Auto Nuove e Usate<br>
-        ☎ 095 878357 &nbsp; ✉ spautoaciccatena@gmail.com
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<footer class="footer" id="contatti">
-  S.P. AUTO &nbsp; • &nbsp; ACI CATENA (CT)
-</footer>
-
-</body>
-</html>
